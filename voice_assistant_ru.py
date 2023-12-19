@@ -25,16 +25,16 @@ from selenium.webdriver.common.by import By
 
 device = torch.device('cpu')
 language = 'ru'
-model_id = 'ru_v3'
+model_id = 'ид модели'
 sample_rate = 48000 # 48000
-speaker = 'xenia' # Голоса aidar, baya, kseniya, xenia, random
+speaker = 'нужный спикер'
 put_accent = True
 put_yo = True
 
-model, example_text = torch.hub.load(repo_or_dir='snakers4/silero-models',
-                                     model='silero_tts',
+model, example_text = torch.hub.load(repo_or_dir='нужная модель можете посомтреть в интернете,
+                                     model='название модели',
                                      language='ru',
-                                     speaker='ru_v3')
+                                     speaker='ид модели')
 model.to(device)
 
 def speak(text):
@@ -221,8 +221,8 @@ def speak_en(text):
     put_accent_e = True
     put_yo_e = True
 
-    model, example_text = torch.hub.load(repo_or_dir='snakers4/silero-models',
-                                         model='silero_tts',
+    model, example_text = torch.hub.load(repo_or_dir='нужная модель можете посомтреть в интернете,
+                                         model='название модели',
                                          language=language_e,
                                          speaker=model_id_e)
     model.to(device)
